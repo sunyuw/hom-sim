@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Foundational Pose for Hand Design">
+  <meta name="keywords" content="Mechanical Design, Multi-Finger Robotic Hands, In-Hand Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Foundational Pose for Hand Design </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">The Foundational Pose as a Selection Mechanism for the Design of Tool-Wielding Multi-Finger Robotic Hands</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sunyuw.github.io">Sunyu Wang</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~./jeanoh/">Jean Hyaejin Oh</a>,</span>
+            <span class="author-block">
+              <a href="http://graphics.cs.cmu.edu/nsp/index.html">Nancy S. Polalrd</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">The Robotics Institute, Carnegie Mellon University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+<!--               <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.14158"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+<!--               <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="50%">
+        <source src="./static/videos/experiment_carve.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+<!--         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits. -->
+<!--         A 
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+    <div class="container is-max-widescreen">
+<!--       <div class="rows is-centered "> -->
+      <div class="columns is-centered">
+        <div class="column" style="padding-left: 2px; padding-right: 2px;">
+          <div class="content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/experiment_carve.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column" style="padding-left: 2px; padding-right: 2px;">
+          <div class="content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/experiment_poke.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column" style="padding-left: 2px; padding-right: 2px;">
+          <div class="content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/experiment_press.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-experiment_carve">
+          <video poster="" id="experiment_carve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/experiment_carve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/experiment_poke.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/experiment_press.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+<!--           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video> -->
+<!--         </div> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </section> -->
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> Story in This Paper  </h2>
+        <div class="content has-text-justified">
+          <p>
+            Wielding a tool is in general very different from grasping an object for pick-and-place. 
+          </p>
+          <img src="./static/images/grasp_vs_wield.svg" class="interpolation-image" alt=""
+              style="display: block; margin-left: auto; margin-right: auto; max-width: 60%" >
+          <br>
+          <p> In this work, <b> we investigate how to design multi-finger robotic hands that can wield tools. </b> </p>
+          <img src="./static/images/robotic_hand_holding_tools.jpg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 75%" >
+          <p style="text-align:center; font-size:60%"> Source: <a href="https://www.dreamstime.com/photos-images/robot-hand-holding-wrench.html">dreamstime.com</a> </p>
+          <p> We first scoped the problem to the application of clay sculpting. 
+            By observing human sculptors, we developed an intuition: the poses in which the human hand holds tools are important. </p>
+          <div class="container is-max-widescreen">
+            <div class="rows is-centered ">
+              <div class="columns is-centered">
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sculptor_1.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=q34tLTpg3N4">Youtube</a> </p>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline width="100%">
+                      <source src="./static/videos/sculptor_2.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=RcRsw4U1KXE">Youtube</a> </p>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sculptor_3.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=rLpIdvNvItQ">Youtube</a> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container is-max-widescreen">
+            <div class="rows is-centered ">
+              <div class="columns is-centered">
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sculptor_4.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=9YUVogsLJqs">Youtube</a> </p>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sculptor_5.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=GDXGAFtM2Z8">Youtube</a> </p>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sculptor_6.mp4" type="video/mp4">
+                    </video>
+                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=p7hf8zUCOUA">Youtube</a> </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <p> Based on this intuition, we formulated the concept of <i>foundational pose</i>, which we interpret as a snapshot that captures the underlying mechanism formed by the tool and the hand. </p>
+          <p> And one hand can form multiple mechanisms with the same tool. </p>
+          <div class="container is-max-widescreen">
+            <div class="rows is-centered ">
+              <div class="columns is-centered">
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/human_hand_carve.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline width="31.5%">
+                      <source src="./static/videos/human_hand_poke.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                  <div class="content">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/human_hand_press.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="./static/images/fps.svg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+          <br>
+          <p> Then, we made the following hypothesis: <i><b>if a tool and a hand can reach a foundational pose, then they can act as a corresponding tool-hand mechanism for the hand to wield the tool.</b></i> </p>
+          <p> This hypothesis is central to this work, as it distills a complex tool-wielding behavior into a single pose. </p>
+          <p> We tested this hypothesis in a hand design experiment, where we used foundational poses to sample and evaluate many hand designs. </p>
+          <img src="./static/images/design_framework.svg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+          <p> The results show that above 99% of the 10,785 generated hand designs successfully wielded tools in simulation, supporting our hypothesis. </p>
+          <img src="./static/images/results_tmr.svg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%" >
+          <p> Meanwhile, our methods uncovered the richness of the hand design optimization problem that could be difficult to uncover otherwise, such as clustering and the Pareto front. </p>
+          <img src="./static/images/results_metrics.svg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+          <br>
+          <p> Lastly, we built a hardware prototype equipped with rigid endoskeleton, soft skins, and tendon-pulley transmissions. </p>
+          <img src="./static/images/hardware_prototype.svg" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%" >
+          <p> With even a simple proportional-derivative controller and open-loop trajectories, the prototype managed to wield tools to manipulate clay, 
+            demonstrating our methods' real-world feasibility. </p>
+          <div class="container is-max-widescreen">
+          <!--       <div class="rows is-centered "> -->
+                <div class="columns is-centered">
+                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                    <div class="content">
+                      <video autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/experiment_carve.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                    <div class="content">
+                      <video autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/experiment_poke.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
+                    <div class="content">
+                      <video autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/experiment_press.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> Presentation Video (3 minutes) </h2>
+            <video controls playsinline height="100%">
+              <source src="./static/videos/presentation_video_3min.mp4" type="video/mp4"> </video>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang_2024_fp_hand_design,
+  author    = {Wang, Sunyu and Oh, Jean Hyaejin and Pollard, Nancy S.},
+  title     = {The Foundational Pose as a Selection Mechanism for the Design of Tool-Wielding Multi-Finger Robotic Hands},
+  journal   = {ArXiv},
+  year      = {2024},
+  eprint    = {2409.14158},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2409.14158} }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+<!--     <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p> This website is built based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies website</a>. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
