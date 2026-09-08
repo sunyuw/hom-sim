@@ -229,43 +229,13 @@
           </video>
           <br>
           <p> In this work, <b> we investigate how to enable general multi-finger robotic hands to achieve the entire pick-load-wield tool manipulation process. </b> </p>
-          <p> The key idea is to treat the hand and the tool together as one parallel mechanism. Specifically, the <i>hand-object mechanism</i> consists of the hand, the object, and the <i>generalized contact frames</i>, 
-            which are analgous to the control strings of a marionette for the hand to control object. </p>
+          <p> The key idea is to treat the hand and the tool together as one parallel mechanism. Specifically, the <i>hand-object mechanism</i> consists of the hand, the object, and the <i>generalized contact frames (GCFs)</i>, 
+            which are analgous to the mounting sites of a marionette's control strings for the hand to control object. </p>
           <img src="./static/images/hand_object_mechanism_schematic.svg" class="interpolation-image" alt=""
                         style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
           <p style="text-align:right; font-size:60%"> Source: <a href="https://www.instagram.com/p/DT7vwz5CP2S/?img_index=3">instagram</a> </p>
-          <p> We first scoped the problem to the application of clay sculpting. 
-            By observing human sculptors, we developed an intuition: the poses in which the human hand holds tools are important. </p>
-          <div class="container is-max-widescreen">
-            <div class="rows is-centered ">
-              <div class="columns is-centered">
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/sculptor_1.mp4" type="video/mp4">
-                    </video>
-                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=q34tLTpg3N4">Youtube</a> </p>
-                  </div>
-                </div>
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline width="100%">
-                      <source src="./static/videos/sculptor_2.mp4" type="video/mp4">
-                    </video>
-                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=RcRsw4U1KXE">Youtube</a> </p>
-                  </div>
-                </div>
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/sculptor_3.mp4" type="video/mp4">
-                    </video>
-                    <p style="text-align:center; font-size:60%"> Source: <a href="https://www.youtube.com/watch?v=rLpIdvNvItQ">Youtube</a> </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <p> Importantly, different hand-object mechanisms are constituted by common <i>sub-assemblies</i>, which can also be interpreted as the tokens of dexterous manipulation. </p>
 
           <div class="container is-max-widescreen">
             <div class="rows is-centered ">
@@ -300,82 +270,15 @@
           </div>
 
           <br>
-          <p> Based on this intuition, we formulated the concept of <i>foundational pose</i>, which we interpret as a snapshot that captures the underlying mechanism formed by the tool and the hand. </p>
-          <p> And one hand can form multiple mechanisms with the same tool. </p>
-          <div class="container is-max-widescreen">
-            <div class="rows is-centered ">
-              <div class="columns is-centered">
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/human_hand_carve.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline width="31.5%">
-                      <source src="./static/videos/human_hand_poke.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-                <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                  <div class="content">
-                    <video autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/human_hand_press.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img src="./static/images/fps.svg" class="interpolation-image" alt=""
+          <p> Based on the ideas of hand-object mechanism and sub-assembly, we developed a lightweight, physically interpretable motion planning and contact estmation framework that generates a hand's motion with simple Cartesian velocity commands. </p>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/teleop_interface-3x-annotated-compressed.mp4" type="video/mp4">
+          </video>
+          <img src="./static/images/teleoperation_interface-orca-annotated.pdf" class="interpolation-image" alt=""
                         style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
           <br>
-          <p> Then, we made the following hypothesis: <i><b>if a tool and a hand can reach a foundational pose, then they can act as a corresponding tool-hand mechanism for the hand to wield the tool.</b></i> </p>
-          <p> This hypothesis is central to this work, as it distills a complex tool-wielding behavior into a single pose. </p>
-          <p> We tested this hypothesis in a hand design experiment, where we used foundational poses to sample and evaluate many hand designs. </p>
-          <img src="./static/images/design_framework.svg" class="interpolation-image" alt=""
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
-          <p> The results show that above 99% of the 10,785 generated hand designs successfully wielded tools in simulation, supporting our hypothesis. </p>
-          <img src="./static/images/results_tmr.svg" class="interpolation-image" alt=""
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%" >
-          <p> Meanwhile, our methods uncovered the richness of the hand design optimization problem that could be difficult to uncover otherwise, such as clustering and the Pareto front. </p>
-          <img src="./static/images/results_metrics.svg" class="interpolation-image" alt=""
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+          <p> This framework is immediately generalizable to other hands without the need for extensive data collection or model training, since all hands have the same Cartesian task space. </p>
           <br>
-          <p> Lastly, we built a hardware prototype equipped with rigid endoskeleton, soft skins, and tendon-pulley transmissions. </p>
-          <img src="./static/images/hardware_prototype.svg" class="interpolation-image" alt=""
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%" >
-          <p> With even a simple proportional-derivative controller and open-loop trajectories, the prototype managed to wield tools to manipulate clay, 
-            demonstrating our methods' real-world feasibility. </p>
-          <div class="container is-max-widescreen">
-          <!--       <div class="rows is-centered "> -->
-                <div class="columns is-centered">
-                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                    <div class="content">
-                      <video autoplay controls muted loop playsinline height="100%">
-                        <source src="./static/videos/experiment_carve.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                  </div>
-                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                    <div class="content">
-                      <video autoplay controls muted loop playsinline height="100%">
-                        <source src="./static/videos/experiment_poke.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                  </div>
-                  <div class="column" style="padding-left: 2px; padding-right: 2px;">
-                    <div class="content">
-                      <video autoplay controls muted loop playsinline height="100%">
-                        <source src="./static/videos/experiment_press.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
         </div>
       </div>
     </div>
@@ -388,9 +291,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"> Presentation Video (3 minutes) </h2>
+        <h2 class="title is-3"> Presentation Video (4 minutes) </h2>
             <video controls playsinline height="100%">
-              <source src="./static/videos/presentation_video_3min.mp4" type="video/mp4"> </video>
+              <source src="./static/videos/hand_object_mechanism_sim-with_audio-2k-compressed.mp4" type="video/mp4"> </video>
         </div>
       </div>
   </div>
